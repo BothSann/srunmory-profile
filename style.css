@@ -1,0 +1,421 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #1a1a1d;
+  color: #ffffff;
+  line-height: 1.6;
+  font-size: 1.6rem;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #e2b646 0%, #f2994a 50%, #ff6b6b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+/* Navigation */
+nav {
+  text-transform: uppercase;
+  position: fixed;
+  width: 100%;
+  padding: 3rem 10rem;
+  background-color: rgba(26, 26, 29, 0.95);
+  backdrop-filter: blur(1rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  font-size: 3.4rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  background: linear-gradient(90deg, #e2b646 0%, #f2994a 50%, #ff6b6b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: linear-gradient(90deg, #e2b646 0%, #f2994a 50%, #ff6b6b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 5rem;
+  background: linear-gradient(rgba(26, 26, 29, 0.7), rgba(26, 26, 29, 0.7)),
+    url("/images/mory2.jpg") center/cover;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 90rem;
+  padding-left: 8rem;
+}
+
+.hero-content h1 {
+  font-family: "Merriweather", serif;
+  font-size: 12rem;
+  font-weight: 700;
+
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  background: linear-gradient(90deg, #e2b646 0%, #f2994a 50%, #ff6b6b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-content-text-container {
+  width: 80%;
+}
+
+.hero-content p {
+  font-size: 2.4rem;
+  opacity: 0;
+  animation: fadeInUp 1s ease 0.3s forwards;
+}
+
+/* About Section */
+.about {
+  padding: 8rem 6rem;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-image {
+  flex: 1;
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  font-size: 9rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #e2b646 0%, #f2994a 50%, #ff6b6b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.about-content p {
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+
+/* Portfolio Section */
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  padding: 8rem 6rem;
+  background-color: #212124;
+}
+
+.portfolio h2 {
+  font-size: 9rem;
+  background: linear-gradient(90deg, #e2b646 0%, #f2994a 50%, #ff6b6b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.portfolio-item {
+  flex: 1 1 30rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Testimonials Section */
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  padding: 8rem 6rem;
+  background-color: #1a1a1d;
+}
+
+.testimonials h2 {
+  font-size: 9rem;
+  background: linear-gradient(90deg, #e2b646 0%, #f2994a 50%, #ff6b6b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.testimonial-grid {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.testimonial-card {
+  flex: 1;
+  background-color: #212124;
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-1rem);
+}
+
+.testimonial-card p {
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-card h4 {
+  font-size: 2rem;
+  background: linear-gradient(90deg, #e2b646 0%, #f2994a 50%, #ff6b6b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Contact Section */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 8rem 5rem;
+  background-color: #212124;
+}
+
+.contact h2 {
+  font-size: 9rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #e2b646 0%, #f2994a 50%, #ff6b6b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 50%;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 2rem;
+  background-color: #1a1a1d;
+  border: 0.1rem solid #333;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  transition: border-color 0.3s ease;
+  font-size: 2rem;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #e2b646;
+  outline: none;
+}
+
+button {
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #e2b646 0%, #f2994a 50%, #ff6b6b 100%);
+  color: #1a1a1d;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+button:hover {
+  transform: translateY(-0.4rem);
+  transform: scale(110%);
+  background: linear-gradient(90deg, #ff6b6b 100%, #e2b646 0%, #f2994a 50%);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 55%;
+  }
+
+  h1 {
+    line-height: 1;
+  }
+
+  .hero-content {
+    gap: 2.4 rem;
+  }
+
+  .about {
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 6rem !important;
+  }
+
+  p {
+    font-size: 2rem !important;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .about {
+    flex-direction: column;
+    padding: 5rem 2rem;
+  }
+
+  .portfolio,
+  .testimonials,
+  .contact {
+    padding: 5rem 4rem;
+    gap: 2.5rem;
+  }
+
+  .testimonial-grid {
+    flex-direction: column;
+  }
+
+  .portfolio-item {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 45%;
+  }
+
+  h2 {
+    font-size: 4rem !important;
+  }
+
+  p {
+    font-size: 1.8rem !important;
+  }
+
+  .hero-content {
+    gap: 3.2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 7rem;
+  }
+
+  .hero {
+    padding: 0 2rem;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
