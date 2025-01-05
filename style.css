@@ -81,7 +81,7 @@ nav {
   align-items: center;
   padding: 0 5rem;
   background: linear-gradient(rgba(26, 26, 29, 0.7), rgba(26, 26, 29, 0.7)),
-    url("/images/mory2.jpg") center/cover;
+    url("images/mory2.jpg") center/cover;
 }
 
 .hero-content {
